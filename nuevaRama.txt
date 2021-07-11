@@ -1,8 +1,1 @@
-Hola, añadi algo
-esto es un texto para master
-modifico esto antes de hacer un merge
-para esto estoy en master
-esto es un texto para dev branch
-estoy probando esto
-para esto estoy en la rama dev
-Añadiendo algo a dev
+Ya tengo el repo en github y mi ssh
