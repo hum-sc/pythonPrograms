@@ -1,3 +1,0 @@
-Ya tengo el repo en github y mi ssh
-Ok regrese en el tiempo y arregle este archivo
-Vamos a quitar de stagin la rama y a ponerla de nuevo
