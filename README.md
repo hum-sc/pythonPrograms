@@ -5,3 +5,8 @@ A repository for my learning programs on python
 - [Operaciones](#operaciones)
 
 ## Operaciones
+```python
+    def run(){
+        print('Hola')
+    }
+```
