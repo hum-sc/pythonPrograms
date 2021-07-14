@@ -3,14 +3,36 @@ A repository for my learning programs on python
 
 ## Indice
 - [Operaciones](#operaciones)
+    - [Suma](#suma)
 
 ## Operaciones
 En python hay (como en todo lenguaje de programacion) una forma especifica de escribir operaciones matematicas, las cuales serán listadas a continuacion.
 
 ### Suma
-La suma es
 ```python
-    def run(){
-        print('Hola')
-    }
+    1+3
+```
+### Resta
+```python
+    1-3
+```
+### Multiplicacion
+```python
+    1*3
+```
+### Division
+```python
+    1/3
+```
+### Division entera
+```python
+    1//3
+```
+### Residuo
+```python
+    1%3
+```
+### Potencia
+```python
+    1**3
 ```
