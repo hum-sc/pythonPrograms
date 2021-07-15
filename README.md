@@ -131,6 +131,6 @@ Es decir, Intentamos hacer algo, y si hay una exepcion, hacemos lo otro, como si
 ```python
     try:
         # codigo a ejecutar
-    except:
+    except TypoDeError:
         # codigo a ejecutar si hay un error
 ```
