@@ -48,19 +48,19 @@ Es una caja, en ella puedes meter objetos
 ## Objetos
 En python todo es un objeto
 ### Tipos de objetos
-- Números enteros
+- ##### Números enteros
 ```python
     integer_number = 1
 ```
-- Números flotantes
+- ##### Números flotantes
 ```python
     float_number = 1.5
 ```
-- Cadena de texto
+- ##### Cadena de texto
 ```python
     string = "hola"
 ```
-- Cadena de texto con varias lineas
+- ##### Cadena de texto con varias lineas
 ```python
     multi_line_string = """
     linea 1
@@ -68,7 +68,7 @@ En python todo es un objeto
     linea 3
     """
 ```
-- Booleanos
+- ##### Booleanos
 ```python
     #Estos solo pueden ser True o False
     boolean = True
@@ -134,3 +134,10 @@ Es decir, Intentamos hacer algo, y si hay una exepcion, hacemos lo otro, como si
     except TypoDeError:
         # codigo a ejecutar si hay un error
 ```
+## Assert Statements
+Son maneras de manejar errores, en esta hay una condicion que debe cumplirse, de lo contrario lanzara un mensaje de error.
+```python
+    assert condicion, "Mensaje de error"
+```
+>Afirmo que esta condicion es verdadera, de lo contrario devuelve un mensaje de error.
+Devuelve un error de tipo AssertionError.
