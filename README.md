@@ -101,9 +101,19 @@ En python todo es un objeto
 ## Errores
 Siempre que codifiquemos tendremos algun error, pues no somos perfectos, por lo que en python hay distintos tipos de errores.
 
-A rasgos muy generales, hay dos grupos de errores, el primero donde **python nos dice que nos equivocamos** y el otro **Donde no nos dice**.
+A rasgos muy generales, hay dos grupos de errores, el primero donde **python nos dice que nos equivocamos** y el otro **sonde no nos dice**.
 
-Si corremos con la suerte que python nos diga que nos equivocamos, normalmente veremos algo como esto: 
+### Python no nos dice
+Comunmente, cuando python **no nos dice** es porque el error lo tenemos dentro de la logica de nuestro algoritmo, o por ejemplo, si pedimos ingresar un correo electronico y el usuario ingresa un nombre, python no sabra que hay un error ahi.
+
+Para solucionar esto, podemos verificar nosotros si es un correo, en su defecto podemos lanzar errores usando ***raise***
+```python
+    raise TypeError("No es un correo electronico")
+```
+***raise*** lo que hace es crear un objeto de error, y luego lanzarlo a la funcion superior.
+
+### Python nos dice
+Si corremos con la suerte que python nos dice que nos equivocamos, normalmente veremos algo como esto: 
 
 > File "ruta del archivo", line 16, in "modulo"
 
@@ -114,3 +124,13 @@ Si corremos con la suerte que python nos diga que nos equivocamos, normalmente v
 >    "Expresion que genera el error"
 
 >"Tipo de Error": "Mensaje de error"
+
+### Obtener errores y usarlos para ejecutar codigo
+Podemos obtener errores usando ***except*** despues de ***try***.
+Es decir, Intentamos hacer algo, y si hay una exepcion, hacemos lo otro, como si de un ***if...else*** se tratara pero para el manejo de errores.
+```python
+    try:
+        # codigo a ejecutar
+    except:
+        # codigo a ejecutar si hay un error
+```
