@@ -36,3 +36,10 @@ En python hay (como en todo lenguaje de programacion) una forma especifica de es
 ```python
     1**3
 ```
+
+## Variables
+En python las variables son objetos que almacenan un valor, pueden ser de cualquier tipo de dato.
+
+Es una caja, en ella puedes meter objetos
+
+    >>> nombre = "Juan"
