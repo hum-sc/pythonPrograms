@@ -4,6 +4,12 @@ A repository for my learning programs on python
 ## Indice
 - [Operaciones](#operaciones)
     - [Suma](#suma)
+    - [Resta](#resta)
+    - [Multiplicación](#multiplicacion)
+    - [División](#division)
+    - ["Division Entera"](#division-entera)
+    - [Residuo](#residuo)
+    - [Potencia](#potencia)
 
 ## Operaciones
 En python hay (como en todo lenguaje de programacion) una forma especifica de escribir operaciones matematicas, las cuales serán listadas a continuacion.
