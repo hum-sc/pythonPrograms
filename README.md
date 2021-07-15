@@ -1,8 +1,6 @@
 # pythonPrograms
 A repository for my learning programs on python
 
-## Indice
-
 ## Operaciones
 En python hay (como en todo lenguaje de programacion) una forma especifica de escribir operaciones matematicas, las cuales serán listadas a continuacion.
 
@@ -106,8 +104,13 @@ Siempre que codifiquemos tendremos algun error, pues no somos perfectos, por lo 
 A rasgos muy generales, hay dos grupos de errores, el primero donde **python nos dice que nos equivocamos** y el otro **Donde no nos dice**.
 
 Si corremos con la suerte que python nos diga que nos equivocamos, normalmente veremos algo como esto: 
+
 > File "ruta del archivo", line 16, in "modulo"
+
 >   run()
+
 >  File "ruta del archivo", line 10, in run
->    "Expresion que genera el codigo"
+
+>    "Expresion que genera el error"
+
 >"Tipo de Error": "Mensaje de error"
