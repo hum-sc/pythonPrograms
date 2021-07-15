@@ -1,14 +1,13 @@
 def divisors(num):
     divisors = []
     try:
-        if num < 0 or num == 0 :
-            raise ValueError('Debe ingresar un numero positivo o distinto de 0')
+        assert num>0, 'Debe ingresar un numero mayor que 0'
         for i in range(1, num + 1):
             if num % i == 0:
                 divisors.append(i)
         return divisors
-    except ValueError as ve:
-        return ve
+    except AssertionError as ae:
+        return ae
 
 
 def run():
