@@ -7,9 +7,14 @@ A repository for my learning programs on python
     - [Resta](#resta)
     - [Multiplicación](#multiplicacion)
     - [División](#division)
-    - ["Division Entera"](#division-entera)
+    - [Division Entera](#division-entera)
     - [Residuo](#residuo)
     - [Potencia](#potencia)
+- [Variables](#variables)
+- [Objetos](#objetos)
+    -[Tipos de objetos](#tipos-de-objetos)
+    - [Convertir objetos](#convertir-objetos)
+
 
 ## Operaciones
 En python hay (como en todo lenguaje de programacion) una forma especifica de escribir operaciones matematicas, las cuales serán listadas a continuacion.
@@ -83,3 +88,27 @@ En python todo es un objeto
     #Estos solo pueden ser True o False
     boolean = True
 ```
+### Convertir objetos
+- A número entero
+```python
+    float_number = 1.5
+    float_number_as_integer = int(float_number)
+```
+- A número flotante
+```python
+    integer_number = 1
+    integer_number_as_float = float(integer_number)
+```
+- A cadena de texto
+```python
+    integer_number = 1
+    integer_number_as_string = str(integer_number)
+```
+- A boolean
+```python
+    integer_number = 1
+    integer_number_as_boolean = bool(integer_number)
+```
+
+
+## Operadores logicos y de comparación
