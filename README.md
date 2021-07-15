@@ -140,4 +140,5 @@ Son maneras de manejar errores, en esta hay una condicion que debe cumplirse, de
     assert condicion, "Mensaje de error"
 ```
 >Afirmo que esta condicion es verdadera, de lo contrario devuelve un mensaje de error.
+
 Devuelve un error de tipo AssertionError.
