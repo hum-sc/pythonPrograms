@@ -48,19 +48,19 @@ Es una caja, en ella puedes meter objetos
 ## Objetos
 En python todo es un objeto
 ### Tipos de objetos
-- Números enteros
+- ##### Números enteros
 ```python
     integer_number = 1
 ```
-- Números flotantes
+- ##### Números flotantes
 ```python
     float_number = 1.5
 ```
-- Cadena de texto
+- ##### Cadena de texto
 ```python
     string = "hola"
 ```
-- Cadena de texto con varias lineas
+- ##### Cadena de texto con varias lineas
 ```python
     multi_line_string = """
     linea 1
@@ -68,7 +68,7 @@ En python todo es un objeto
     linea 3
     """
 ```
-- Booleanos
+- ##### Booleanos
 ```python
     #Estos solo pueden ser True o False
     boolean = True
@@ -101,9 +101,19 @@ En python todo es un objeto
 ## Errores
 Siempre que codifiquemos tendremos algun error, pues no somos perfectos, por lo que en python hay distintos tipos de errores.
 
-A rasgos muy generales, hay dos grupos de errores, el primero donde **python nos dice que nos equivocamos** y el otro **Donde no nos dice**.
+A rasgos muy generales, hay dos grupos de errores, el primero donde **python nos dice que nos equivocamos** y el otro **sonde no nos dice**.
 
-Si corremos con la suerte que python nos diga que nos equivocamos, normalmente veremos algo como esto: 
+### Python no nos dice
+Comunmente, cuando python **no nos dice** es porque el error lo tenemos dentro de la logica de nuestro algoritmo, o por ejemplo, si pedimos ingresar un correo electronico y el usuario ingresa un nombre, python no sabra que hay un error ahi.
+
+Para solucionar esto, podemos verificar nosotros si es un correo, en su defecto podemos lanzar errores usando ***raise***
+```python
+    raise TypeError("No es un correo electronico")
+```
+***raise*** lo que hace es crear un objeto de error, y luego lanzarlo a la funcion superior.
+
+### Python nos dice
+Si corremos con la suerte que python nos dice que nos equivocamos, normalmente veremos algo como esto: 
 
 > File "ruta del archivo", line 16, in "modulo"
 
@@ -114,3 +124,20 @@ Si corremos con la suerte que python nos diga que nos equivocamos, normalmente v
 >    "Expresion que genera el error"
 
 >"Tipo de Error": "Mensaje de error"
+
+### Obtener errores y usarlos para ejecutar codigo
+Podemos obtener errores usando ***except*** despues de ***try***.
+Es decir, Intentamos hacer algo, y si hay una exepcion, hacemos lo otro, como si de un ***if...else*** se tratara pero para el manejo de errores.
+```python
+    try:
+        # codigo a ejecutar
+    except TypoDeError:
+        # codigo a ejecutar si hay un error
+```
+## Assert Statements
+Son maneras de manejar errores, en esta hay una condicion que debe cumplirse, de lo contrario lanzara un mensaje de error.
+```python
+    assert condicion, "Mensaje de error"
+```
+>Afirmo que esta condicion es verdadera, de lo contrario devuelve un mensaje de error.
+Devuelve un error de tipo AssertionError.
