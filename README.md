@@ -2,19 +2,6 @@
 A repository for my learning programs on python
 
 ## Indice
-- [Operaciones](#operaciones)
-    - [Suma](#suma)
-    - [Resta](#resta)
-    - [Multiplicación](#multiplicacion)
-    - [División](#division)
-    - [Division Entera](#division-entera)
-    - [Residuo](#residuo)
-    - [Potencia](#potencia)
-- [Variables](#variables)
-- [Objetos](#objetos)
-    -[Tipos de objetos](#tipos-de-objetos)
-    - [Convertir objetos](#convertir-objetos)
-
 
 ## Operaciones
 En python hay (como en todo lenguaje de programacion) una forma especifica de escribir operaciones matematicas, las cuales serán listadas a continuacion.
@@ -112,3 +99,15 @@ En python todo es un objeto
 
 
 ## Operadores logicos y de comparación
+
+## Errores
+Siempre que codifiquemos tendremos algun error, pues no somos perfectos, por lo que en python hay distintos tipos de errores.
+
+A rasgos muy generales, hay dos grupos de errores, el primero donde **python nos dice que nos equivocamos** y el otro **Donde no nos dice**.
+
+Si corremos con la suerte que python nos diga que nos equivocamos, normalmente veremos algo como esto: 
+> File "ruta del archivo", line 16, in "modulo"
+>   run()
+>  File "ruta del archivo", line 10, in run
+>    "Expresion que genera el codigo"
+>"Tipo de Error": "Mensaje de error"
