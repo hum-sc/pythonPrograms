@@ -97,6 +97,7 @@ En python todo es un objeto
 
 
 ## Operadores logicos y de comparación
+[]ASAP
 
 ## Errores
 Siempre que codifiquemos tendremos algun error, pues no somos perfectos, por lo que en python hay distintos tipos de errores.
