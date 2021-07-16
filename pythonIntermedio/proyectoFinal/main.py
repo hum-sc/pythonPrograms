@@ -109,7 +109,7 @@ def game():
             indexed_letters[letter] = []
         indexed_letters[letter].append(indx)
     #El juego
-    while live<7:
+    while live<6:
         os.system(clr)
         print(IMÁGENES_AHORCADO[live])
         print('Adivina la palabra')
@@ -136,8 +136,7 @@ def game():
             print(ve)
             time.sleep(1)
             
-
-    if live==7:
+    if live==6:
         os.system(clr)
         print(IMÁGENES_AHORCADO[6])
         print('Lo siento, la palabra era: ',chosen_word)
@@ -149,7 +148,7 @@ def run():
     home = """
     Bienvenido al juego del ahorcado 🏁️
     by Humberto SC
-    
+
     Presiona 1 para comenzar a jugar 🎮️
     Presiona 2 para ver el scoreboard 🌐️
     Cualquier otra tecla para salir
