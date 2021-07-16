@@ -1,6 +1,58 @@
 import os
 import platform
 import random
+import time
+
+IMÁGENES_AHORCADO = ['''
+  +---+
+  |   |
+      |
+      |
+      |
+      |
+ =========''', '''
+    +---+
+   |   |
+   O   |
+       |
+       |
+       |
+ =========''', '''
+    +---+
+   |   |
+   O   |
+   |   |
+       |
+       |
+ =========''', '''
+    +---+
+   |   |
+   O   |
+  /|   |
+       |
+       |
+ =========''', '''
+    +---+
+   |   |
+   O   |
+  /|\  |
+       |
+       |
+ =========''', '''
+    +---+
+   |   |
+   O   |
+  /|\  |
+  /    |
+       |
+ =========''', '''
+    +---+
+   |   |
+   O   |
+  /|\  |
+  / \  |
+       |
+ =========''']
 
 
 def get_data():
@@ -27,6 +79,7 @@ def save_scores(score):
     name = input('Ingrese su nickname: ')
     with open('./scores.txt', 'a', encoding='utf-8') as f:
         f.write(name+':'+str(score))
+        f.write('\n')
 
 
 def get_clear():
@@ -48,7 +101,7 @@ def game():
     #Dibujando la orca
 
     #Variable de la vida y puntaje
-    live = 10
+    live = 0
     score_word = len(chosen_word)*0.75
     #Indexamos las letras
     for indx, letter in enumerate(chosen_word):
@@ -56,9 +109,9 @@ def game():
             indexed_letters[letter] = []
         indexed_letters[letter].append(indx)
     #El juego
-    while live>0:
+    while live<7:
         os.system(clr)
-        print('Intentos restantes: ', live)
+        print(IMÁGENES_AHORCADO[live])
         print('Adivina la palabra')
         #Imprimimos las coincidencias de la palabra
         for element in underscored_word:
@@ -66,17 +119,27 @@ def game():
         print('\n')
         #Leemos la letra a ingresar
         letter = input('Ingresa una letra: ').strip().upper()
-        if letter in word_list and not letter in underscored_word:
-            for indx in indexed_letters[letter]:
-                underscored_word[indx] = letter
-        else :
-            live-=1
-        if not '_' in underscored_word:
+        try:
+            if letter.isalpha() and len(letter) == 1:
+                if letter in word_list and not letter in underscored_word:
+                    for indx in indexed_letters[letter]:
+                        underscored_word[indx] = letter
+                else :
+                    live+=1
+                if not '_' in underscored_word:
+                    os.system(clr)
+                    print('Haz adivinado la palabra: ', chosen_word)
+                    break
+            else: raise ValueError('Debes ingresar solamente una letra')
+        except ValueError as ve:
             os.system(clr)
-            print('Haz adivinado la palabra: ', chosen_word)
-            break
-    if live==0:
+            print(ve)
+            time.sleep(1)
+            
+
+    if live==7:
         os.system(clr)
+        print(IMÁGENES_AHORCADO[6])
         print('Lo siento, la palabra era: ',chosen_word)
         return 0
     else: return score_word
@@ -86,27 +149,38 @@ def run():
     home = """
     Bienvenido al juego del ahorcado 🏁️
     Presiona 1 para comenzar a jugar 🎮️
-    Presiona 0 para salir
     Presiona 2 para ver el scoreboard 🌐️
+    Cualquier otra tecla para salir
     """
     os.system(clr)
     print(home)
+    state = 0
 
-    state = int(input('     '))
+    try : state = int(input('     '))
+    except ValueError : os.system(clr)
+    
     score = 0
     while state == 1:
         score+=game()
+        save = 0
         print('Tu puntaje es: ', score)
-        state = int(input('Introduce 1 para jugar de nuevo\nIntroduce 0 para salir\n'))
+        try :
+            state = int(input('Introduce 1 para jugar de nuevo\nIntroduce cualquier otra tecla para salir\n'))
+        except: 
+            state = 0
         if state == 0:
             os.system(clr)
             print('Tu puntaje fue:', score,""" ¿Deseas guardarlo?
             1 - Sí
             2 - No
             """)
-            save=int(input(    ))
+            try:
+                save=int(input(    ))
+                if save != 1 and save != 2 : raise ValueError('Debes ingresar 1 o 2')
+            except ValueError: print('Debes ingresar 1 o 2')
             if save == 1:
                 save_scores(score)
+            else: os.system(clr)
     if state == 2:
         os.system(clr)
         print('Scoreboard')
