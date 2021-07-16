@@ -135,6 +135,7 @@ Es decir, Intentamos hacer algo, y si hay una exepcion, hacemos lo otro, como si
     except TypoDeError:
         # codigo a ejecutar si hay un error
 ```
+
 ## Assert Statements
 Son maneras de manejar errores, en esta hay una condicion que debe cumplirse, de lo contrario lanzara un mensaje de error.
 ```python
@@ -143,3 +144,5 @@ Son maneras de manejar errores, en esta hay una condicion que debe cumplirse, de
 >Afirmo que esta condicion es verdadera, de lo contrario devuelve un mensaje de error.
 
 Devuelve un error de tipo AssertionError.
+
+## Usar archivos
