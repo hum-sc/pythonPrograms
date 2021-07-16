@@ -148,6 +148,8 @@ def game():
 def run():
     home = """
     Bienvenido al juego del ahorcado 🏁️
+    by Humberto SC
+    
     Presiona 1 para comenzar a jugar 🎮️
     Presiona 2 para ver el scoreboard 🌐️
     Cualquier otra tecla para salir
