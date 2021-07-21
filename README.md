@@ -145,4 +145,14 @@ Son maneras de manejar errores, en esta hay una condicion que debe cumplirse, de
 
 Devuelve un error de tipo AssertionError.
 
-## Usar archivos
+
+# Pensamiento Computacional con Python
+## Enumeracion Exhaustiva
+Se trata de enumerar todas las posibilidades, aunque es muy ineficiente, en la actualidad no importa demasiado pues las computadoras son muy rápidas (obvio hay casos que no son asi).
+
+## Aproximacion de soluciones
+Se trata de encontrar una aproximacion de la solucion a un problema, es decir, encontrar una solucion que se aproxime a la solucion exacta.
+
+## Busqueda binaria
+Se trata de buscar en la mitad de los datos, y dependiendo si ese dato es mayor o menor discriminas alguna de las dos mitades.
+Por ejemplo, si buscas en 
