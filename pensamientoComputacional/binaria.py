@@ -1,4 +1,6 @@
 def run():
+    """Run 
+    """
     objetivo = int(input('Introduce un numero: '))
     li = 0
     ls = max(1.0, objetivo)
