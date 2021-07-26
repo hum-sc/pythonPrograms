@@ -155,4 +155,21 @@ Se trata de encontrar una aproximacion de la solucion a un problema, es decir, e
 
 ## Busqueda binaria
 Se trata de buscar en la mitad de los datos, y dependiendo si ese dato es mayor o menor discriminas alguna de las dos mitades.
-Por ejemplo, si buscas en 
+
+
+# Programacion Orientada a Objetos
+La clave de POO es pensar en los objetos como agrupaciones de datos y los metodos que operan dichos datos, la estructura de dicha informacion la proporcionan las *Clases* (forumlario) y las instancias (cada que se llena el formulario) son los objetos reales.
+
+### Ejemplo
+**Clase:** Persona
+**Atributos:**
+- Nombre
+- Peso
+- Ocupacion
+**Metodos**
+- Comer
+- Caminar
+- Dormir
+
+Todas las clases crean objetos y todos los objetos tienen atributos. Utilizamos el método especial __init__ para definir el estado inicial de nuestra instancia. Recibe como primer parámetro obligatorio self (que es simplemente una referencia a la instancia).
+
